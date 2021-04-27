@@ -1,7 +1,0 @@
-CREATE TABLE `habit` (
-	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    `habit_name` VARCHAR(20) NOT NULL,
-    `icon` VARCHAR(50) NOT NULL,
-    `color` VARCHAR(10) NOT NULL,
-    PRIMARY KEY(`id`)
-)
