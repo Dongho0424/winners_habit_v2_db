@@ -3,3 +3,5 @@
 ## git ignore ##
 
 .DS_Store
+
+*.pdf
