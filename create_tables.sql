@@ -1,3 +1,4 @@
+
 CREATE TABLE attribute (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     attribute VARCHAR(20) NOT NULL
@@ -132,6 +133,8 @@ CREATE TABLE user_has_habit (
     FOREIGN KEY(`user_id`) REFERENCES `user`(id),
     FOREIGN KEY(`challenge_habit_id`) REFERENCES `challenge_has_habit`(id)
 );
+
+ALTER TABLE user_has_habit ADD COLUMN alarm_flag TINYINT(1) NOT NULL DEFAULT 1;
 
 CREATE TABLE table_history (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,

@@ -51,16 +51,16 @@ INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default
 		, "F5D423", 1, 1, NULL, "빌게이츠 챌린지 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (2, "운동", "https://w7.pngwing.com/pngs/416/969/png-transparent-kaatsu-exercise-pictogram-strength-training-others-thumbnail.png"
-		, "FA331B", 2, 1, 20, "빌게이츠 챌린지 - 독서");
+		, "FA331B", 2, 1, 20, "빌게이츠 챌린지 - 운동");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (3, "독서", "https://icons555.com/images/icons-blue/image_icon_book_pic_512x512.png"
 		, "2B42F5", 3, 1, 20, "빌게이츠 챌린지 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (4, "새벽 기상", "https://cpng.pikpng.com/pngl/s/61-610145_half-moon-transparent-yellow-half-moon-png-clipart.png"
-		, "F5D423", 1, 2, NULL, "빌게이츠 챌린지 - 독서");
+		, "F5D423", 1, 2, NULL, "스티브잡스 챌린지 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (5, "운동", "https://w7.pngwing.com/pngs/416/969/png-transparent-kaatsu-exercise-pictogram-strength-training-others-thumbnail.png"
-		, "FA331B", 2, 2, 20, "빌게이츠 챌린지 - 독서");
+		, "FA331B", 2, 2, 20, "스티브잡스 챌린지 - 운동");
 
 INSERT INTO challenge_has_habit (id, habit_id, challenge_id)
 	VALUES (1, 1, 1);
@@ -74,6 +74,8 @@ INSERT INTO challenge_has_habit (id, habit_id, challenge_id)
 	VALUES (5, 5, 2);
 
 --
+INSERT INTO challenge_has_user (id, user_id, challenge_id, create_date, end_flag, complete_flag)
+	VALUES (6, 1, 1, "2021-04-24 09:27:00", 0, 0);
 INSERT INTO challenge_has_user (id, user_id, challenge_id, create_date, end_flag, complete_flag)
 	VALUES (1, 2, 1, "2021-01-25 17:37:00", 1, 1);
 INSERT INTO challenge_has_user (id, user_id, challenge_id, create_date, end_flag, complete_flag)
@@ -106,6 +108,28 @@ INSERT INTO grade (id, grade_name, picture) VALUES (3, "초등학생", "");
 INSERT INTO grade (id, grade_name, picture) VALUES (4, "중학생", "");
 INSERT INTO grade (id, grade_name, picture) VALUES (5, "고등학생", "");
 
+INSERT INTO user_has_habit 
+	(id, user_id, challenge_habit_id, alarm_flag, repeat_mon, repeat_tue, repeat_wed, 
+    repeat_thu, repeat_fri, repeat_sat, repeat_sun)
+VALUES (1, 1, 1, 0, 0,0,0,0,0,0,0);
+INSERT INTO user_has_habit 
+	(id, user_id, challenge_habit_id, alarm_flag, repeat_mon, repeat_tue, repeat_wed, 
+    repeat_thu, repeat_fri, repeat_sat, repeat_sun)
+VALUES (2, 1, 2, 0, 0,0,0,0,0,0,0);
+INSERT INTO user_has_habit 
+	(id, user_id, challenge_habit_id, alarm_flag, repeat_mon, repeat_tue, repeat_wed, 
+    repeat_thu, repeat_fri, repeat_sat, repeat_sun)
+VALUES (3, 1, 3, 0, 0,0,0,0,0,0,0);
 
+INSERT INTO user_has_habit 
+	(id, user_id, challenge_habit_id, alarm_flag, repeat_mon, repeat_tue, repeat_wed, 
+    repeat_thu, repeat_fri, repeat_sat, repeat_sun)
+VALUES (4, 2, 1, 0, 0,0,0,0,0,0,0),
+		(5, 2, 2, 0, 0,0,0,0,0,0,0),
+		(6, 2, 3, 0, 0,0,0,0,0,0,0);
 
-
+INSERT INTO user_has_habit 
+	(id, user_id, challenge_habit_id, alarm_flag, repeat_mon, repeat_tue, repeat_wed, 
+    repeat_thu, repeat_fri, repeat_sat, repeat_sun)
+VALUES  (7, 2, 4, 0, 0,0,0,0,0,0,0),
+		(8, 2, 5, 0, 0,0,0,0,0,0,0);
