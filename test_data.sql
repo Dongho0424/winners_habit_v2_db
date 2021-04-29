@@ -48,19 +48,19 @@ INSERT INTO `winner` (id, `name`, info) VALUES (3, "최동호", "네 저는 최�
 
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (1, "새벽 기상", "https://cpng.pikpng.com/pngl/s/61-610145_half-moon-transparent-yellow-half-moon-png-clipart.png"
-		, "F5D423", 1, 1, NULL, "빌게이츠 챌린지 - 독서");
+		, "F5D423", 1, 1, NULL, "빌게이츠 습관 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (2, "운동", "https://w7.pngwing.com/pngs/416/969/png-transparent-kaatsu-exercise-pictogram-strength-training-others-thumbnail.png"
-		, "FA331B", 2, 1, 20, "빌게이츠 챌린지 - 운동");
+		, "FA331B", 2, 1, 20, "빌게이츠 습관 - 운동");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (3, "독서", "https://icons555.com/images/icons-blue/image_icon_book_pic_512x512.png"
-		, "2B42F5", 3, 1, 20, "빌게이츠 챌린지 - 독서");
+		, "2B42F5", 3, 1, 20, "빌게이츠 습관 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (4, "새벽 기상", "https://cpng.pikpng.com/pngl/s/61-610145_half-moon-transparent-yellow-half-moon-png-clipart.png"
-		, "F5D423", 1, 2, NULL, "스티브잡스 챌린지 - 독서");
+		, "F5D423", 1, 2, NULL, "스티브잡스 습관 - 독서");
 INSERT INTO habit (id, habit_name, icon, color, attribute_id, winner_id, default_attribute_value, `desc`)
 	VALUES (5, "운동", "https://w7.pngwing.com/pngs/416/969/png-transparent-kaatsu-exercise-pictogram-strength-training-others-thumbnail.png"
-		, "FA331B", 2, 2, 20, "스티브잡스 챌린지 - 운동");
+		, "FA331B", 2, 2, 20, "스티브잡스 습관 - 운동");
 
 INSERT INTO challenge_has_habit (id, habit_id, challenge_id)
 	VALUES (1, 1, 1);
@@ -133,3 +133,33 @@ INSERT INTO user_has_habit
     repeat_thu, repeat_fri, repeat_sat, repeat_sun)
 VALUES  (7, 2, 4, 0, 0,0,0,0,0,0,0),
 		(8, 2, 5, 0, 0,0,0,0,0,0,0);
+
+-- habit_history
+INSERT INTO habit_history (id, user_habit_id, `date`, done_flag)
+VALUES 
+	(1, 1, "2021-04-24", 1),
+    (2, 1, "2021-04-25", 1),
+    (3, 1, "2021-04-26", 0),
+    (4, 1, "2021-04-27", 0),
+    (5, 1, "2021-04-28", 0),
+    (6, 1, "2021-04-29", 1),
+    
+	(7, 2, "2021-04-24", 1),
+    (8, 2, "2021-04-25", 1),
+    (9, 2, "2021-04-26", 1),
+    (10, 2, "2021-04-27", 0),
+    (11, 2, "2021-04-28", 0),
+    (12, 2, "2021-04-29", 1),
+    
+	(13, 3, "2021-04-24", 1),
+    (14, 3, "2021-04-25", 1),
+    (15, 3, "2021-04-26", 0),
+    (16, 3, "2021-04-27", 1),
+    (17, 3, "2021-04-28", 0),
+    (18, 3, "2021-04-29", 0);
+
+
+
+
+
+
