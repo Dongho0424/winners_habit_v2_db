@@ -99,13 +99,29 @@ WHERE
 /*
 api #3
 --- 쿼리 설명 ---
-
+E Z
 --- API 설명 ---		
 모든 winner 나오는 페이지
 */   
 
-SELECT id, `name`
-FROM winner
+SELECT id, `name`, picture FROM winner;
+
+/*
+api #4
+--- 쿼리 설명 ---
+
+--- API 설명 ---		
+winner와 그 챌린지에 대한 정보
+challenge에 picture에 
+*/  
+
+
+
+
+
+
+
+
 
 
 

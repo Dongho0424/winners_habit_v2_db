@@ -9,13 +9,11 @@ INSERT INTO `user` (id, pw, user_name)
 INSERT INTO `user` (id, pw, user_name)
 	VALUES (5, "1234", "황재하");
     
-INSERT INTO `challenge` (id, d_day, challenge_name)
-	VALUES (1, 35, "빌 게이츠");
-INSERT INTO `challenge` (id, d_day, challenge_name)
-	VALUES (2, 50, "스티브 잡스");
-INSERT INTO `challenge` (id, d_day, challenge_name)
-	VALUES (3, 40, "최동호");
-    
+INSERT INTO `challenge` (id, d_day, challenge_name, image)
+VALUES 	(1, 35, "빌 게이츠", ""),
+		(2, 50, "스티브 잡스", ""),
+        (3, 40, "최동호", "");
+
 INSERT INTO attribute (id, attribute) VALUES (1, "s/f");
 INSERT INTO attribute (id, attribute) VALUES (2, "min");
 INSERT INTO attribute (id, attribute) VALUES (3, "pages");
@@ -88,10 +86,13 @@ INSERT INTO challenge_has_user (id, user_id, challenge_id, create_date, end_flag
 INSERT INTO challenge_has_user (id, user_id, challenge_id, create_date, end_flag, complete_flag)
 	VALUES (5, 5, 1, "2020-04-15 01:32:00", 1, 0);
     
+    
+    
 INSERT INTO challenge_comment (id, user_id, challenge_id, create_date, update_date, `like`, unlike)
 	VALUES (1, 2, 1, "2021-04-25 17:37:00", NULL, 10, 1);
 INSERT INTO challenge_comment (id, user_id, challenge_id, create_date, update_date, `like`, unlike)
 	VALUES (2, 3, 1, "2021-04-24 11:37:00", NULL, 30, 10);
+
 
 INSERT INTO achv (id, achv_name, `desc`) VALUES (1, "빌 게이츠", "빌 게이츠 챌린지를 마치셨습니다. ㅊㅋ");
 INSERT INTO achv (id, achv_name, `desc`) VALUES (2, "스티브 잡스", "스티브 잡스 챌린지를 마치셨습니다. ㅊㅋ");

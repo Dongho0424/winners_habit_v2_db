@@ -31,7 +31,8 @@ CREATE TABLE `habit` (
 CREATE TABLE challenge (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     d_day INTEGER NOT NULL,
-    challenge_name VARCHAR(15) NOT NULL
+    challenge_name VARCHAR(15) NOT NULL,
+    image VARCHAR(500) NOT NULL
 );
 
 CREATE TABLE `user` (
@@ -51,7 +52,7 @@ CREATE TABLE achv (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     achv_name VARCHAR(10) NOT NULL,
     `desc` VARCHAR(100) NOT NULL,
-    icon VARCHAR(100) NOT NULL
+    icon VARCHAR(100)
 );
 
 CREATE TABLE grade (
