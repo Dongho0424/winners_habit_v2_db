@@ -96,7 +96,16 @@ WHERE
 	FROM challenge_has_user chu
 	WHERE user_id = 1 AND end_flag = 0 ); 
     
+/*
+api #3
+--- 쿼리 설명 ---
 
+--- API 설명 ---		
+모든 winner 나오는 페이지
+*/   
+
+SELECT id, `name`
+FROM winner
 
 
 

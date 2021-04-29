@@ -11,7 +11,8 @@ CREATE TABLE attribute (
 CREATE TABLE winner (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(20) NOT NULL,
-    info VARCHAR(1000) NOT NULL
+    info VARCHAR(1000) NOT NULL,
+    picture VARCHAR(500) NULL
 );
 
 CREATE TABLE `habit` (
@@ -122,9 +123,6 @@ CREATE TABLE user_has_habit (
     FOREIGN KEY(`challenge_habit_id`) REFERENCES `challenge_has_habit`(id)
 );
 
-ALTER TABLE user_has_habit ADD COLUMN alarm_flag TINYINT(1) NOT NULL DEFAULT 1;
-ALTER TABLE user_has_habit ADD COLUMN `time` TIME;
-
 
 CREATE TABLE habit_history (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -133,8 +131,6 @@ CREATE TABLE habit_history (
 	`done_flag` TINYINT(1) NOT NULL DEFAULT 0,
     FOREIGN KEY (user_habit_id) REFERENCES `user_has_habit`(id)
 );
-
-ALTER TABLE table_history RENAME habit_history;
 
 
 
