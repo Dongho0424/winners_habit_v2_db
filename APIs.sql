@@ -8,7 +8,7 @@
 
 -- -------------------------------------------------------
 /*
-api #
+api #glol
 --- 쿼리 설명 ---
 --- API 설명 ---		
 */   
@@ -82,7 +82,7 @@ WHERE uhh.user_id = 1
 	FROM challenge_has_user chu
 	WHERE user_id = 1 AND end_flag = 0 ); 
     
-SELECT `date`, done_flag
+SELECT hh.id, `date`, done_flag
 FROM habit_history AS hh
 	JOIN user_has_habit      AS uhh ON uhh.id = hh.user_habit_id
     JOIN challenge_has_habit AS chh ON chh.id = uhh.challenge_habit_id
@@ -104,7 +104,7 @@ E Z
 모든 winner 나오는 페이지
 */   
 
-SELECT id, `name`, picture FROM winner;
+SELECT id, `challenge_name`, image FROM challenge;
 
 /*
 api #4
