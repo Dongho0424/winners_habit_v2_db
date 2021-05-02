@@ -33,12 +33,11 @@ api #1
 SELECT COUNT(end_flag) FROM challenge_has_user
 WHERE user_id = userId AND end_flag = 0; -- return 1 or 0
 -- ------------
-SELECT c.challenge_name, c.d_day
+SELECT c.challenge_name, c.d_day, c.image, c.id
 FROM challenge_has_user AS chu
 	JOIN challenge      AS c ON c.id = chu.challenge_id
 WHERE user_id = userId AND end_flag = 0;
 -- ------------
-
 SELECT 
 	h.id, h.habit_name, h.icon, h.color, h.default_attribute_value,
     a.attribute, uhh.alarm_flag, uhh.alarm_time
