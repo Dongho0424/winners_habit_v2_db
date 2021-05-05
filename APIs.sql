@@ -114,7 +114,22 @@ winner와 그 챌린지에 대한 정보
 challenge에 picture에 
 */  
 
+/*
+api #5
+--- 쿼리 설명 ---
+userId, date에 해당하는 습관의 히스토리 가져오기
+--- API 설명 ---		
+userId, date에 해당하는 습관의 히스토리 가져오기
+*/  
 
+SELECT chh.habit_id, hh.done_flag
+FROM habit_history AS hh
+	JOIN user_has_habit AS uhh ON hh.user_habit_id = uhh.id
+    JOIN challenge_has_habit AS chh ON chh.id = uhh.challenge_habit_id
+WHERE 
+	hh.`date` = "2021-05-03"
+	AND
+	uhh.user_id = 1;
 
 
 
